@@ -5,6 +5,7 @@
 }
 html{
     font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -17,7 +18,7 @@ html{
 }
 .nav{
     width: 100%;
-    height: auto;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,14 +37,184 @@ html{
     border-radius: 4px;
     font-size: 1.5rem;
 }
-.car__red{
+
+
+/* ------------Main------------ */
+.autos_tesla{
     width: 100%;
     height: auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.car__red{
+    width: 100%;
+    height: 650px;
 }
 .car__red img{
-    position: fixed;
-    top: -70px;
+    position: relative;
+    top: 0;
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    overflow: hidden;
 }
+.text{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 4000;
+}
+.text h1{
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #171a20;
+}
+.text p{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #17191e;
+    
+}
+.botones{
+    width: 100%;
+    padding: 0 24px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 4000;
+}
+.botones button:nth-child(1){
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #383b40;
+    color: #fefefe;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+
+.botones button:nth-child(2){
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #dddddd;
+    color: #393c41;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.icon_arrow{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon_arrow img{
+    animation-name: saltar;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes saltar {
+    0%{transform: translateY(0);}
+    25%{transform: translateY(4px);}
+    50%{transform: translateY(-6px);}
+    75%{transform: translateY(4px);}
+    100%{transform: translateY(0);}
+}
+
+
+/* ----------------------------------- */
+
+.car__blue{
+    width: 100%;
+    height: 650px;
+    position: relative;
+
+}
+.car__blue img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.text{
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 4000;
+}
+.text h1{
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #171a20;
+    white-space: nowrap;
+}
+.text p{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #17191e;
+    white-space: nowrap;
+    
+}
+.botones{
+    width: 100%;
+    padding: 0 24px;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 4000;
+}
+.botones button:nth-child(1){
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #383b40;
+    color: #fefefe;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+
+.botones button:nth-child(2){
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #dddddd;
+    color: #393c41;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 0;
+}
+.footer p{
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #64666a;
+}
+
+
+
