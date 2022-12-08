@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesla</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <div>
         <header class="header">
             <nav class="nav">
                 <a href="#" class="logotipo">
-                    <img src="./assets/svg/tesla_logotipo.svg" alt="Logotipo" width="140px">
+                    <img src="./assets/svg/tesla_logotipo.svg" alt="Logotipo" width="120">
                 </a>
                 <button class="menu">Menu</button>
             </nav>
         </header>
+        <div class="car__red">
+            <picture>
+                <source media="(min-width:980px)" srcset="./assets/img/red_car_desktop.jpg">
+                <source media="(min-width:720px)" srcset="./assets/img/car_red_laptop.jpg">
+                <source media="(min-width:560px)" srcset="./assets/img/car_red_tablet.jpg">
+                <img src="./assets/img/car_red_mobile.jpg" alt="">
+            </picture>
+            
+        </div>
     </div>    
 </body>
 </html>

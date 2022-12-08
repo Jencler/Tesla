@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: blue; */
+    padding: 0 14px 0 10px;
+}
+.logotipo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu {
+    border: none;
+    padding: 6px 16px;
+    background-color: rgba(0, 0, 0, 0.087);
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+.car__red{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.car__red img{
+    position: fixed;
+    top: -70px;
+    width: 100%;
+    object-fit: cover;
+}
