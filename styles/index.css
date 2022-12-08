@@ -6,6 +6,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -44,20 +45,42 @@ html{
     font-size: 1.5rem;
     cursor: pointer;
 }
+/* ----------------NAVEGACION DESKTOP---------------- */
+
+.lista{
+    display: none;
+}
+
+
+
+
+
+
 
 /* ------------ASIDE MENU------------------- */
 
 .aside{
     width: 280px;
     height: 100vh;
-    background-color: aqua;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     right: 0;
     overflow-y: auto;
     opacity: 0;
+    z-index: -10;
+    clip-path: circle(5% at top right);
+    transition: clip-path 0.4s cubic-bezier(.62,.4,.12,.68);
     
 }
+.active{
+    opacity: 1;
+    z-index: 4000;
+    clip-path: circle(150% at top right);
+
+}
+
+
 .aside::-webkit-scrollbar {
     display: none;
 }
@@ -68,6 +91,9 @@ html{
     justify-content: flex-end;
     padding: 20px;
     margin-bottom: 12px;
+}
+.container_icon_close{
+    cursor: pointer;
 }
 .aside__text{
     width: 100%;
@@ -81,9 +107,9 @@ html{
 .aside__text p{
     font-size: 1.5rem;
     font-weight: 500;
+    color: #414448;
+    cursor: pointer;
 }
-
-
 
 
 /* ------------Main------------ */
@@ -315,3 +341,26 @@ html{
 }
 
 
+@media (min-width:1200px){
+    .nav{
+        justify-content: space-evenly;
+        padding: 0 50px;
+    }
+    .lista{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+    }
+    .lista .nav__item{
+        padding: 0 12px;
+    }
+    .lista .nav__item .nav__link{
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 8px 2px;
+        font-weight: 500;
+        color: #171a20;
+    }
+}
